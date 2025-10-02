@@ -7,10 +7,8 @@ namespace chipmunk2d {
 
 class Chipmunk2DComponent : public esphome::Component {
  public:
-  void setup() override;
-  void loop() override {};
+  float get_setup_priority() const override { return setup_priority::PROCESSOR; }
 };
 
 }  // namespace chipmunk2d
 }  // namespace esphome
-
